@@ -1,0 +1,36 @@
+{
+  "name": "express-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for nodejs express with es6 support",
+  "main": "lib/server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/farhanmahmood1811/express-boilerplate"
+  },
+  "scripts": {
+    "start": "node bin/dev",
+    "build": "npm run clean && babel lib -s -d build",
+    "clean": "rm -rf build && mkdir build",
+    "production": "npm run build && NODE_ENV=production node bin/production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "es6",
+    "boilerplate",
+    "express"
+  ],
+  "author": "farhan",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "helmet": "^3.13.0"
+  }
+}
